@@ -4,7 +4,6 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.awt.Color;
 
-
 public class VentanaFinal extends JFrame implements ActionListener {
 	
     static VentanaFinal fin;
@@ -41,6 +40,18 @@ public class VentanaFinal extends JFrame implements ActionListener {
            fin.setTitle("Ventana final");
            fin.setResizable(false);   
       }
+
+
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+
         
 }
 
