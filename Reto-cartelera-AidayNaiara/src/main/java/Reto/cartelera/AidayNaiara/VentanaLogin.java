@@ -75,7 +75,7 @@ public void actionPerformed(ActionEvent e) {
        iniciarsesion.setVisible(true);
        this.setVisible(false);
        iniciarsesion.setResizable(false);
-       iniciarsesion.setTitle("Final");  
+       iniciarsesion.setTitle("Login");  
        
     } else {
     	
@@ -84,7 +84,7 @@ public void actionPerformed(ActionEvent e) {
         iniciarsesion.setVisible(true);
         this.setVisible(false);
         iniciarsesion.setResizable(false);
-        iniciarsesion.setTitle("Final");  
+        iniciarsesion.setTitle("Login");  
   	
   }
     }
