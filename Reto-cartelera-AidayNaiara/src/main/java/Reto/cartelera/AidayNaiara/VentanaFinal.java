@@ -49,9 +49,5 @@ public class VentanaFinal extends JFrame implements ActionListener {
 		
 	}
 
-
-
-
-        
+       
 }
-

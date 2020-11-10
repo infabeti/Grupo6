@@ -48,7 +48,7 @@ public VentanaLogin () {
     fnombre.setEditable(true);
     add(fnombre);
     
-    fcontra = new JTextField();
+    fcontra = new JPasswordField();
     fcontra.setBounds(270, 327, 150, 30);
     fcontra.setEditable(true);
     add(fcontra);
@@ -68,16 +68,16 @@ public VentanaLogin () {
 public void actionPerformed(ActionEvent e) {
 	 
     
-    if(fnombre.equals("naiarayaida") && fcontra.equals(12345) ){
+    if(fnombre.getText().equals("naiarayaida") && fcontra.getText().equals("12345") ) {
        
-       VentanaFinal iniciarsesion=new VentanaFinal();
+       VentanaSabado iniciarsesion=new VentanaSabado();
        iniciarsesion.setBounds(0, 0, 1000, 700);
        iniciarsesion.setVisible(true);
        this.setVisible(false);
        iniciarsesion.setResizable(false);
        iniciarsesion.setTitle("Final");  
        
-    }else {
+    } else {
     	
   	  VentanaLogin iniciarsesion=new VentanaLogin();
         iniciarsesion.setBounds(0, 0, 1000, 700);
