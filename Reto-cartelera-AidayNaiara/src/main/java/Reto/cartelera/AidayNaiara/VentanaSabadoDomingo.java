@@ -6,6 +6,7 @@ import java.awt.event.*;
 import java.awt.Color;
 
 
+
 public class VentanaSabadoDomingo extends JFrame implements ActionListener{
    static VentanaSabadoDomingo vtnsab;
    private JLabel cartelerasabado,carteleradomingo,menusalir,
@@ -13,7 +14,7 @@ public class VentanaSabadoDomingo extends JFrame implements ActionListener{
    tiemporestsab, tiemporestdom;
    private JButton si;
    private Color azulito;
-   static public JTextField campogeneros, tiempsab, tiempdom;
+   static public JTextField campogeneros, tiempsab, tiempdom,s1parasab, s2parasab;
    
    public VentanaSabadoDomingo(){
         
@@ -27,6 +28,15 @@ public class VentanaSabadoDomingo extends JFrame implements ActionListener{
         cartelerasabado.setFont(cartelerasabado.getFont().deriveFont(35f));
         add(cartelerasabado);
         
+        s1parasab = new JTextField();
+        s1parasab.setBounds(80, 240, 360, 25);
+        s1parasab.setEditable(false);
+        add(s1parasab);
+        
+        s2parasab = new JTextField();
+        s2parasab.setBounds(80, 280, 360, 25);
+        s2parasab.setEditable(false);
+        add(s2parasab);
         
         carteleradomingo=new JLabel("CARTELERA DOMINGO");
         carteleradomingo.setBounds(520,160,900,60);
@@ -129,7 +139,8 @@ public class VentanaSabadoDomingo extends JFrame implements ActionListener{
         	 generos.setVisible(true);
              this.setVisible(false);
              generos.setResizable(false);
-             generos.setTitle("Drama");               
+             generos.setTitle("Drama");  
+             
           }
          
          /*2.comedia*/

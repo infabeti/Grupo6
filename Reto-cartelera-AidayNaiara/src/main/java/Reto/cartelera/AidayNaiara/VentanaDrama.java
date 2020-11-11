@@ -8,9 +8,11 @@ import java.awt.Color;
 
 public class VentanaDrama extends JFrame implements ActionListener{
    static VentanaDrama vtndra;
-   private JLabel generodrama, sabado, domingo, peli1s, peli2s, peli3s, peli4s, peli1d, peli2d, peli3d, peli4d, introducesab, introducedom;
+   private JLabel generodrama, sabado, domingo, peli1s, peli2s, peli3s, peli4s, peli1d, peli2d, peli3d, peli4d, 
+   introducesab, introducedom;
    private JButton si;
-   private JTextField codigosab, codigodom;
+   static public JTextField codigosab, codigodom;
+   public static String peli1parasab;
    private Color azulito;
    
    
@@ -123,18 +125,8 @@ public class VentanaDrama extends JFrame implements ActionListener{
     
     public void actionPerformed(ActionEvent e){
    
-        
-         if(e.getSource()==si){
-             
-            VentanaFinal SI=new VentanaFinal();
-            SI.setBounds(0, 0, 1000, 700);
-            SI.setVisible(true);
-            this.setVisible(false); 
-            SI.setResizable(false);
-            SI.setTitle("Género - Drama");  
-         }
-         
-         /* 0 para salir a bienvenida */
+              
+         /* 0 para salir a bienvenida SÁBADO */
           
          if(codigosab.getText().equals("0") ) {
              
@@ -146,6 +138,35 @@ public class VentanaDrama extends JFrame implements ActionListener{
              salirdrama.setTitle("Ventana Bienvenida");              
           }
          
+         
+         if(codigosab.getText().equals("1") ) {
+             
+             VentanaSabadoDomingo drama=new VentanaSabadoDomingo();
+             drama.setBounds(0, 0, 1000, 700);
+             drama.setVisible(true);
+             this.setVisible(false);
+             drama.setResizable(false);
+             drama.setTitle("Ventana Cartelera Sábado - Domingo");   
+             
+             VentanaSabadoDomingo.s1parasab.setText("1. Handia 1h 56min");
+                   
+          }
+         
+         if(codigosab.getText().equals("2") ) {
+             
+             VentanaSabadoDomingo drama=new VentanaSabadoDomingo();
+             drama.setBounds(0, 0, 1000, 700);
+             drama.setVisible(true);
+             this.setVisible(false);
+             drama.setResizable(false);
+             drama.setTitle("Ventana Cartelera Sábado - Domingo");   
+             
+             VentanaSabadoDomingo.s2parasab.setText("1. H222 1h 56min");
+                   
+          }
+         
+         
+         /* 0 para salir a bienvenida DOMINGO */
          if(codigodom.getText().equals("0") ) {
              
              VentanaBienvenida salirdrama=new VentanaBienvenida();
