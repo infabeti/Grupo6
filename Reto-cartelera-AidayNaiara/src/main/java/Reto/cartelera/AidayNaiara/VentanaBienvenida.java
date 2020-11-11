@@ -34,7 +34,7 @@ public class VentanaBienvenida extends JFrame implements ActionListener{
             	tempo.setVisible(true);
                 this.setVisible(false); 
                 tempo.setResizable(false);
-                tempo.setTitle("Final");  
+                tempo.setTitle("Bienvenida");  
                 
                 
              }

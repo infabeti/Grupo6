@@ -70,7 +70,7 @@ public void actionPerformed(ActionEvent e) {
     
     if(fnombre.getText().equals("naiarayaida") && fcontra.getText().equals("12345") ) {
        
-       VentanaSabado iniciarsesion=new VentanaSabado();
+       VentanaSabadoDomingo iniciarsesion=new VentanaSabadoDomingo();
        iniciarsesion.setBounds(0, 0, 1000, 700);
        iniciarsesion.setVisible(true);
        this.setVisible(false);

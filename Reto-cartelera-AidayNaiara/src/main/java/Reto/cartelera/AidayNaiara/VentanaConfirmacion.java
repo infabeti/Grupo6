@@ -7,9 +7,9 @@ import java.awt.Color;
 
 
 public class VentanaConfirmacion extends JFrame implements ActionListener{
-    static VentanaConfirmacion conpago;
-    private JLabel pagoconfirmado;
-    private JButton NO, SI;
+   static VentanaConfirmacion conf;
+   private JLabel confcartelera;
+   private JButton no, si;
    private Color azulito;
   
     public VentanaConfirmacion(){
@@ -19,29 +19,29 @@ public class VentanaConfirmacion extends JFrame implements ActionListener{
         setLayout(null);
         Color azulito = new Color(164, 190, 214);
         
-        pagoconfirmado=new JLabel("¿ESTÁS DE ACUERDO CON LA CARTELERA?");
-        pagoconfirmado.setBounds(60,180,900,60);
-        pagoconfirmado.setFont(pagoconfirmado.getFont().deriveFont(40f));
-        add(pagoconfirmado);
+        confcartelera=new JLabel("¿ESTÁS DE ACUERDO CON LA CARTELERA?");
+        confcartelera.setBounds(60,180,900,60);
+        confcartelera.setFont(confcartelera.getFont().deriveFont(40f));
+        add(confcartelera);
         
         
-        NO=new JButton("NO");
-        NO.setBounds(630,350, 160, 45);
-        NO.setFont(NO.getFont().deriveFont(15f));
-        NO.setVisible(true);
-        add(NO);
-        NO.addActionListener(this);
-        NO.setBackground(azulito);
-        NO.setForeground(Color.black);
+        no=new JButton("NO");
+        no.setBounds(630,350, 160, 45);
+        no.setFont(no.getFont().deriveFont(15f));
+        no.setVisible(true);
+        add(no);
+        no.addActionListener(this);
+        no.setBackground(azulito);
+        no.setForeground(Color.black);
         
-        SI=new JButton("SÍ");
-        SI.setBounds(200,350, 160, 45);
-        SI.setFont(SI.getFont().deriveFont(15f));
-        SI.setVisible(true);
-        add(SI);
-        SI.addActionListener(this);
-        SI.setBackground(azulito);
-        SI.setForeground(Color.black);
+        si=new JButton("SÍ");
+        si.setBounds(200,350, 160, 45);
+        si.setFont(si.getFont().deriveFont(15f));
+        si.setVisible(true);
+        add(si);
+        si.addActionListener(this);
+        si.setBackground(azulito);
+        si.setForeground(Color.black);
         
   
     }
@@ -49,7 +49,7 @@ public class VentanaConfirmacion extends JFrame implements ActionListener{
     public void actionPerformed(ActionEvent e){
    
         
-         if(e.getSource()==SI){
+         if(e.getSource()==si){
              
             VentanaFinal SI=new VentanaFinal();
             SI.setBounds(0, 0, 1000, 700);
@@ -59,7 +59,7 @@ public class VentanaConfirmacion extends JFrame implements ActionListener{
             SI.setTitle("Final");  
          }
           
-         if(e.getSource()==NO){
+         if(e.getSource()==no){
              
              VentanaBienvenida NO=new VentanaBienvenida();
              NO.setBounds(0, 0, 1000, 700);
