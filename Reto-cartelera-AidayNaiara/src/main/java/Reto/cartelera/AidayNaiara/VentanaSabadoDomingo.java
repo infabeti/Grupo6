@@ -28,15 +28,11 @@ public class VentanaSabadoDomingo extends JFrame implements ActionListener{
         cartelerasabado.setFont(cartelerasabado.getFont().deriveFont(35f));
         add(cartelerasabado);
         
+        
         s1parasab = new JTextField();
-        s1parasab.setBounds(80, 240, 360, 25);
+        s1parasab.setBounds(80, 240, 360, 250);
         s1parasab.setEditable(false);
         add(s1parasab);
-        
-        s2parasab = new JTextField();
-        s2parasab.setBounds(80, 280, 360, 25);
-        s2parasab.setEditable(false);
-        add(s2parasab);
         
         carteleradomingo=new JLabel("CARTELERA DOMINGO");
         carteleradomingo.setBounds(520,160,900,60);
@@ -54,7 +50,11 @@ public class VentanaSabadoDomingo extends JFrame implements ActionListener{
         campogeneros.setEditable(true);
         add(campogeneros);
         
-       
+        s2parasab = new JTextField();
+        s2parasab.setBounds(530, 240, 360, 250);
+        s2parasab.setEditable(false);
+        add(s2parasab);
+        
         /*LISTA DE GÉNEROS Y SALIR*/
         menusalir=new JLabel("0.Salir");
         menusalir.setBounds(650,65,900,60);
@@ -83,27 +83,28 @@ public class VentanaSabadoDomingo extends JFrame implements ActionListener{
         
         /*TIEMPO RESTANTE DE CADA DÍA*/
         
-        tiemporestsab=new JLabel("TIEMPO RESTANTE SÁBADO");
+        tiemporestsab=new JLabel("HORAS RESTANTES SÁBADO");
         tiemporestsab.setBounds(80,510,900,60);
         tiemporestsab.setFont(tiemporestsab.getFont().deriveFont(14f));
         add(tiemporestsab);
         
-        tiempsab = new JTextField("8h");
+        tiempsab = new JTextField("8");
         tiempsab.setBounds(290, 525, 160, 30);
         tiempsab.setEditable(false);
         add(tiempsab);
         
         
-        tiemporestdom=new JLabel("TIEMPO RESTANTE DOMINGO");
+        tiemporestdom=new JLabel("HORAS RESTANTES DOMINGO");
         tiemporestdom.setBounds(550,510,900,60);
         tiemporestdom.setFont(tiemporestdom.getFont().deriveFont(14f));
         add(tiemporestdom);
         
-        tiempdom = new JTextField("6h");
+
+        tiempdom = new JTextField("6");
         tiempdom.setBounds(770, 525, 160, 30);
         tiempdom.setEditable(false);
         add(tiempdom);
-        
+
         
         si=new JButton("CONTINUAR");
         si.setBounds(770, 590, 160, 45);
