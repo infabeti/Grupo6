@@ -191,7 +191,71 @@ public class VentanaDrama extends JFrame implements ActionListener{
         	 VentanaSabadoDomingo.s1parasab.setText("4. Million Dollar Baby: 2h 13 min");
             
          }
+         
+         /* -------------------------------- para domingo --------------------------------------------------- */
+         if(codigodom.getText().equals("0") ) {
+             
+             VentanaBienvenida salirdrama=new VentanaBienvenida();
+             salirdrama.setBounds(0, 0, 1000, 700);
+             salirdrama.setVisible(true);
+             this.setVisible(false);
+             salirdrama.setResizable(false);
+             salirdrama.setTitle("Ventana Bienvenida");              
+          }
+         
+         
+         if(codigodom.getText().equals("1") ) {
+             
+             VentanaSabadoDomingo drama=new VentanaSabadoDomingo();
+             drama.setBounds(0, 0, 1000, 700);
+             drama.setVisible(true);
+             this.setVisible(false);
+             drama.setResizable(false);
+             drama.setTitle("Ventana Cartelera Sábado - Domingo");   
+             
+             VentanaSabadoDomingo.s2parasab.setText("1. Handia 1h 56min");
+                   
+          }
+         
+         if(codigodom.getText().equals("2") ) {
+             
+             VentanaSabadoDomingo drama=new VentanaSabadoDomingo();
+             drama.setBounds(0, 0, 1000, 700);
+             drama.setVisible(true);
+             this.setVisible(false);
+             drama.setResizable(false);
+             drama.setTitle("Ventana Cartelera Sábado - Domingo");   
+             
+             VentanaSabadoDomingo.s2parasab.setText("2. La lista de Schindler: 3h 17 min");
+                   
+          }
+         
+         if(codigodom.getText().equals("3") ) {
+             
+             VentanaSabadoDomingo drama=new VentanaSabadoDomingo();
+             drama.setBounds(0, 0, 1000, 700);
+             drama.setVisible(true);
+             this.setVisible(false);
+             drama.setResizable(false);
+             drama.setTitle("Ventana Cartelera Sábado - Domingo");   
+             
+             VentanaSabadoDomingo.s2parasab.setText("3. Cadena Perpetua: 2h 22 min");
+                   
+          }
+         
   
+         if(codigodom.getText().equals("4") ) {
+      
+        	 VentanaSabadoDomingo drama=new VentanaSabadoDomingo();
+        	 drama.setBounds(0, 0, 1000, 700);
+        	 drama.setVisible(true);
+        	 this.setVisible(false);
+        	 drama.setResizable(false);
+        	 drama.setTitle("Ventana Cartelera Sábado - Domingo");   
+      
+        	 VentanaSabadoDomingo.s2parasab.setText("4. Million Dollar Baby: 2h 13 min");
+            
+         }
          
          
          /* 0 para salir a bienvenida DOMINGO */
