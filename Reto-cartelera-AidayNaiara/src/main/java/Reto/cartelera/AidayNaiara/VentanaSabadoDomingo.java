@@ -237,6 +237,11 @@ public class VentanaSabadoDomingo extends JFrame implements ActionListener{
              generos.setResizable(false);
              generos.setTitle("Resumen");               
           }
+         
+         if(campogeneros.getText().equals("6")) 
+         {
+        	 JOptionPane.showMessageDialog(null, "Error, introduce un número entre 0 y 5");   
+          }
                    
    }
     
