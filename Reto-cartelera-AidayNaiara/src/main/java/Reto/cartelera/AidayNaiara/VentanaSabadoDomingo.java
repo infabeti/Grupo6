@@ -9,11 +9,11 @@ import java.awt.Color;
 
 public class VentanaSabadoDomingo extends JFrame implements ActionListener{
    static VentanaSabadoDomingo vtnsab;
-   private JLabel cartelerasabado,carteleradomingo,menusalir,
+   public JLabel cartelerasabado,carteleradomingo,menusalir,
    menugenerodrama,menugenerocomedia, menugeneroterror, menugenerosf, introducegener,
-   tiemporestsab, tiemporestdom;
-   private JButton si;
-   private Color azulito;
+   tiemporestsab, tiemporestdom, contfin;
+   public JButton si;
+   public Color azulito;
    static public JTextField campogeneros, tiempsab, tiempdom,s1parasab, s2parasab;
    
    public VentanaSabadoDomingo(){
@@ -81,6 +81,11 @@ public class VentanaSabadoDomingo extends JFrame implements ActionListener{
         menugenerosf.setFont(menugenerosf.getFont().deriveFont(14f));
         add(menugenerosf);
         
+        contfin=new JLabel("5. Finalizar");
+        contfin.setBounds(750,115,900,60);
+        contfin.setFont(contfin.getFont().deriveFont(14f));
+        add(contfin);
+        
         /*TIEMPO RESTANTE DE CADA DÍA*/
         
         tiemporestsab=new JLabel("HORAS RESTANTES SÁBADO");
@@ -129,7 +134,33 @@ public class VentanaSabadoDomingo extends JFrame implements ActionListener{
              generos.setVisible(true);
              this.setVisible(false);
              generos.setResizable(false);
-             generos.setTitle("Ventana Bienvenida");              
+             generos.setTitle("Ventana Bienvenida");  
+             
+             VentanaDrama.peli1parasab=""; 
+             VentanaDrama.peli1paradom="";
+             
+             VentanaComedia.peli2parasab=""; 
+             VentanaComedia.peli2paradom="";
+
+             VentanaTerror.peli3parasab=""; 
+             VentanaTerror.peli3paradom="";
+             
+             VentanaCienciaFiccion.peli4parasab=""; 
+             VentanaCienciaFiccion.peli4paradom="";
+             
+
+             
+             VentanaCienciaFiccion.codigosab.setEditable(true);
+             VentanaCienciaFiccion.codigodom.setEditable(true);
+             
+             VentanaDrama.codigosab.setEditable(true);
+             VentanaDrama.codigodom.setEditable(true);
+             
+             VentanaComedia.codigosab.setEditable(true);
+             VentanaComedia.codigodom.setEditable(true);
+             
+             VentanaTerror.codigosab.setEditable(true);
+             VentanaTerror.codigodom.setEditable(true);
           }
          
          /*1.drama*/
@@ -175,6 +206,17 @@ public class VentanaSabadoDomingo extends JFrame implements ActionListener{
              this.setVisible(false);
              generos.setResizable(false);
              generos.setTitle("Ciencia Ficción");               
+          }
+         
+         /*SALIR*/
+         if(campogeneros.getText().equals("5") ) {
+             
+             VentanaResumen generos=new VentanaResumen();
+             generos.setBounds(0, 0, 1000, 700);
+             generos.setVisible(true);
+             this.setVisible(false);
+             generos.setResizable(false);
+             generos.setTitle("Resumen");               
           }
                    
    }

@@ -8,12 +8,13 @@ import java.awt.Color;
 
 public class VentanaDrama extends JFrame implements ActionListener{
    static VentanaDrama vtndra;
-   private JLabel generodrama, sabado, domingo, peli1s, peli2s, peli3s, peli4s, peli1d, peli2d, peli3d, peli4d, 
-   introducesab, introducedom;
-   private JButton si;
-   static public JTextField codigosab, codigodom;
-   public static String peli1parasab;
-   private Color azulito;
+   public JLabel generodrama, sabado, domingo, peli1s, peli2s, peli3s, peli4s, peli1d, peli2d, peli3d, peli4d, 
+   introducesab, introducedom, introducsalir;
+   public JButton si;
+   public static JTextField codigosab, codigodom, salirfield;
+   public static String peli1parasab="",peli1paradom="";
+   public static Integer codigotexto=0,codigotextodom=0 ;
+   public Color azulito;
    
    
    public VentanaDrama(){
@@ -91,6 +92,8 @@ public class VentanaDrama extends JFrame implements ActionListener{
         introducesab.setFont(introducesab.getFont().deriveFont(15f));
         add(introducesab);
         
+       
+        
         introducedom=new JLabel("Introduzca el código: ");
         introducedom.setBounds(92,505,900,60);
         introducedom.setFont(introducedom.getFont().deriveFont(15f));
@@ -104,10 +107,24 @@ public class VentanaDrama extends JFrame implements ActionListener{
         codigosab.setEditable(true);
         add(codigosab);
         
+        /*--------------------------------------------------------- */
+        
+        if (codigotexto== 1  || codigotexto== 2 || codigotexto== 3 || codigotexto== 4) {
+        	
+     	   codigosab.setEditable(false);
+     	
+        }
+        
         codigodom = new JTextField();
         codigodom.setBounds(775, 520, 160, 32);
         codigodom.setEditable(true);
         add(codigodom);
+        
+        if (codigotextodom== 1  || codigotextodom== 2 || codigotextodom== 3 || codigotextodom== 4) {
+        	
+      	   codigodom.setEditable(false);
+      	
+         }
         
         /* Boton */
         
@@ -120,6 +137,17 @@ public class VentanaDrama extends JFrame implements ActionListener{
         si.setBackground(azulito);
         si.setForeground(Color.black);
         
+        introducsalir=new JLabel("Introduzca 0 si desea salir y 1 si desea volver a elegir género :");
+        introducsalir.setBounds(60,580,900,60);
+        introducsalir.setFont(introducsalir.getFont().deriveFont(15f));
+        add(introducsalir);
+        
+        salirfield = new JTextField();
+        salirfield.setBounds(530, 595, 150, 30);
+        salirfield.setEditable(true);
+        add(salirfield);
+        
+ 
   
     }
     
@@ -135,7 +163,34 @@ public class VentanaDrama extends JFrame implements ActionListener{
              salirdrama.setVisible(true);
              this.setVisible(false);
              salirdrama.setResizable(false);
-             salirdrama.setTitle("Ventana Bienvenida");              
+             salirdrama.setTitle("Ventana Bienvenida"); 
+             
+             peli1parasab=""; 
+             peli1paradom="";
+             
+             VentanaComedia.peli2parasab=""; 
+             VentanaComedia.peli2paradom="";
+
+             VentanaTerror.peli3parasab=""; 
+             VentanaTerror.peli3paradom="";
+             
+             VentanaCienciaFiccion.peli4parasab=""; 
+             VentanaCienciaFiccion.peli4paradom="";
+             
+             codigotexto=0; 
+             codigotextodom=0 ;
+             
+             codigosab.setEditable(true);
+             codigodom.setEditable(true);
+             
+             VentanaComedia.codigosab.setEditable(true);
+             VentanaComedia.codigodom.setEditable(true);
+             
+             VentanaTerror.codigosab.setEditable(true);
+             VentanaTerror.codigodom.setEditable(true);
+             
+             VentanaCienciaFiccion.codigosab.setEditable(true);
+             VentanaCienciaFiccion.codigodom.setEditable(true);
           }
          
          
@@ -148,8 +203,13 @@ public class VentanaDrama extends JFrame implements ActionListener{
              drama.setResizable(false);
              drama.setTitle("Ventana Cartelera Sábado - Domingo");   
              
-             VentanaSabadoDomingo.s1parasab.setText("1. Handia 1h 56min");
-                   
+             peli1parasab = peli1parasab + "1. Handia 1h 56min \n";
+                                      
+             codigotexto = 1;
+             
+             VentanaSabadoDomingo.s1parasab.setText(peli1parasab + VentanaComedia.peli2parasab + VentanaTerror.peli3parasab + VentanaCienciaFiccion.peli4parasab);
+             VentanaSabadoDomingo.s2parasab.setText(peli1paradom + VentanaComedia.peli2paradom + VentanaTerror.peli3paradom + VentanaCienciaFiccion.peli4paradom);  //todas las varaiables de cada ventana para que las coja.
+             
           }
          
          if(codigosab.getText().equals("2") ) {
@@ -161,7 +221,12 @@ public class VentanaDrama extends JFrame implements ActionListener{
              drama.setResizable(false);
              drama.setTitle("Ventana Cartelera Sábado - Domingo");   
              
-             VentanaSabadoDomingo.s1parasab.setText("2. La lista de Schindler: 3h 17 min");
+             peli1parasab = peli1parasab + "\n 2. La lista de Schindler: 3h 17 min";
+             
+             codigotexto = 2;
+   
+             VentanaSabadoDomingo.s1parasab.setText(peli1parasab + VentanaComedia.peli2parasab + VentanaTerror.peli3parasab + VentanaCienciaFiccion.peli4parasab);
+             VentanaSabadoDomingo.s2parasab.setText(peli1paradom + VentanaComedia.peli2paradom + VentanaTerror.peli3paradom + VentanaCienciaFiccion.peli4paradom); 
                    
           }
          
@@ -174,8 +239,12 @@ public class VentanaDrama extends JFrame implements ActionListener{
              drama.setResizable(false);
              drama.setTitle("Ventana Cartelera Sábado - Domingo");   
              
-             VentanaSabadoDomingo.s1parasab.setText("3. Cadena Perpetua: 2h 22 min");
-                   
+             peli1parasab = peli1parasab + "3. Cadena Perpetua: 2h 22 min";
+
+             codigotexto = 3;  
+             VentanaSabadoDomingo.s1parasab.setText(peli1parasab + VentanaComedia.peli2parasab + VentanaTerror.peli3parasab + VentanaCienciaFiccion.peli4parasab);
+             VentanaSabadoDomingo.s2parasab.setText(peli1paradom + VentanaComedia.peli2paradom + VentanaTerror.peli3paradom + VentanaCienciaFiccion.peli4paradom); 
+
           }
          
   
@@ -188,7 +257,13 @@ public class VentanaDrama extends JFrame implements ActionListener{
         	 drama.setResizable(false);
         	 drama.setTitle("Ventana Cartelera Sábado - Domingo");   
       
-        	 VentanaSabadoDomingo.s1parasab.setText("4. Million Dollar Baby: 2h 13 min");
+        	 
+        	 peli1parasab = peli1parasab + "4. Million Dollar Baby: 2h 13 min";
+             
+             codigotexto = 4; 
+             VentanaSabadoDomingo.s1parasab.setText(peli1parasab + VentanaComedia.peli2parasab + VentanaTerror.peli3parasab + VentanaCienciaFiccion.peli4parasab);
+             VentanaSabadoDomingo.s2parasab.setText(peli1paradom + VentanaComedia.peli2paradom + VentanaTerror.peli3paradom + VentanaCienciaFiccion.peli4paradom); 
+ 
             
          }
          
@@ -200,7 +275,34 @@ public class VentanaDrama extends JFrame implements ActionListener{
              salirdrama.setVisible(true);
              this.setVisible(false);
              salirdrama.setResizable(false);
-             salirdrama.setTitle("Ventana Bienvenida");              
+             salirdrama.setTitle("Ventana Bienvenida"); 
+             
+             peli1parasab=""; 
+             peli1paradom="";
+             
+             VentanaComedia.peli2parasab=""; 
+             VentanaComedia.peli2paradom="";
+
+             VentanaTerror.peli3parasab=""; 
+             VentanaTerror.peli3paradom="";
+             
+             VentanaCienciaFiccion.peli4parasab=""; 
+             VentanaCienciaFiccion.peli4paradom="";
+             
+             codigotexto=0; 
+             codigotextodom=0 ;
+             
+             codigosab.setEditable(true);
+             codigodom.setEditable(true);
+             
+             VentanaComedia.codigosab.setEditable(true);
+             VentanaComedia.codigodom.setEditable(true);
+             
+             VentanaTerror.codigosab.setEditable(true);
+             VentanaTerror.codigodom.setEditable(true);
+             
+             VentanaCienciaFiccion.codigosab.setEditable(true);
+             VentanaCienciaFiccion.codigodom.setEditable(true);
           }
          
          
@@ -213,8 +315,12 @@ public class VentanaDrama extends JFrame implements ActionListener{
              drama.setResizable(false);
              drama.setTitle("Ventana Cartelera Sábado - Domingo");   
              
-             VentanaSabadoDomingo.s2parasab.setText("1. Handia 1h 56min");
-                   
+             peli1paradom = peli1paradom + "1. Handia 1h 56min \n";           
+                       
+             codigotextodom = 1; 
+             
+             VentanaSabadoDomingo.s1parasab.setText(peli1parasab + VentanaComedia.peli2parasab + VentanaTerror.peli3parasab + VentanaCienciaFiccion.peli4parasab);
+             VentanaSabadoDomingo.s2parasab.setText(peli1paradom + VentanaComedia.peli2paradom + VentanaTerror.peli3paradom + VentanaCienciaFiccion.peli4paradom); 
           }
          
          if(codigodom.getText().equals("2") ) {
@@ -226,8 +332,12 @@ public class VentanaDrama extends JFrame implements ActionListener{
              drama.setResizable(false);
              drama.setTitle("Ventana Cartelera Sábado - Domingo");   
              
-             VentanaSabadoDomingo.s2parasab.setText("2. La lista de Schindler: 3h 17 min");
-                   
+             peli1paradom = peli1paradom + "2. La lista de Schindler: 3h 17 min \n";             
+             
+             codigotextodom = 2; 
+             
+             VentanaSabadoDomingo.s1parasab.setText(peli1parasab + VentanaComedia.peli2parasab + VentanaTerror.peli3parasab + VentanaCienciaFiccion.peli4parasab);
+             VentanaSabadoDomingo.s2parasab.setText(peli1paradom + VentanaComedia.peli2paradom + VentanaTerror.peli3paradom + VentanaCienciaFiccion.peli4paradom); 
           }
          
          if(codigodom.getText().equals("3") ) {
@@ -239,8 +349,12 @@ public class VentanaDrama extends JFrame implements ActionListener{
              drama.setResizable(false);
              drama.setTitle("Ventana Cartelera Sábado - Domingo");   
              
-             VentanaSabadoDomingo.s2parasab.setText("3. Cadena Perpetua: 2h 22 min");
-                   
+             peli1paradom = peli1paradom + "3. Cadena Perpetua: 2h 22 min \n";            
+             
+             codigotextodom = 3; 
+             
+             VentanaSabadoDomingo.s1parasab.setText(peli1parasab + VentanaComedia.peli2parasab + VentanaTerror.peli3parasab + VentanaCienciaFiccion.peli4parasab);
+             VentanaSabadoDomingo.s2parasab.setText(peli1paradom + VentanaComedia.peli2paradom + VentanaTerror.peli3paradom + VentanaCienciaFiccion.peli4paradom); 
           }
          
   
@@ -253,7 +367,14 @@ public class VentanaDrama extends JFrame implements ActionListener{
         	 drama.setResizable(false);
         	 drama.setTitle("Ventana Cartelera Sábado - Domingo");   
       
-        	 VentanaSabadoDomingo.s2parasab.setText("4. Million Dollar Baby: 2h 13 min");
+
+             peli1paradom = peli1paradom + "4. Million Dollar Baby: 2h 13 min \n";
+                          
+             codigotextodom = 4; 
+             VentanaSabadoDomingo.s1parasab.setText(peli1parasab + VentanaComedia.peli2parasab + VentanaTerror.peli3parasab + VentanaCienciaFiccion.peli4parasab);
+             VentanaSabadoDomingo.s2parasab.setText(peli1paradom + VentanaComedia.peli2paradom + VentanaTerror.peli3paradom + VentanaCienciaFiccion.peli4paradom); 
+             
+            
             
          }
          
@@ -267,10 +388,83 @@ public class VentanaDrama extends JFrame implements ActionListener{
              salirdrama.setVisible(true);
              this.setVisible(false);
              salirdrama.setResizable(false);
-             salirdrama.setTitle("Ventana Bienvenida");              
+             salirdrama.setTitle("Ventana Bienvenida");  
+             
+             peli1parasab=""; 
+             peli1paradom="";
+             
+             VentanaComedia.peli2parasab=""; 
+             VentanaComedia.peli2paradom="";
+
+             VentanaTerror.peli3parasab=""; 
+             VentanaTerror.peli3paradom="";
+             
+             VentanaCienciaFiccion.peli4parasab=""; 
+             VentanaCienciaFiccion.peli4paradom="";
+             
+             codigotexto=0; 
+             codigotextodom=0 ;
+             
+             codigosab.setEditable(true);
+             codigodom.setEditable(true);
+             
+             VentanaComedia.codigosab.setEditable(true);
+             VentanaComedia.codigodom.setEditable(true);
+             
+             VentanaTerror.codigosab.setEditable(true);
+             VentanaTerror.codigodom.setEditable(true);
+             
+             VentanaCienciaFiccion.codigosab.setEditable(true);
+             VentanaCienciaFiccion.codigodom.setEditable(true);
           }
       
+         if(salirfield.getText().equals("0") ) {
+             
+             VentanaBienvenida generos=new VentanaBienvenida();
+             generos.setBounds(0, 0, 1000, 700);
+             generos.setVisible(true);
+             this.setVisible(false);
+             generos.setResizable(false);
+             generos.setTitle("Ventana Bienvenida"); 
+             
+             peli1parasab=""; 
+             peli1paradom="";
+             
+             VentanaComedia.peli2parasab=""; 
+             VentanaComedia.peli2paradom="";
+
+             VentanaTerror.peli3parasab=""; 
+             VentanaTerror.peli3paradom="";
+             
+             VentanaCienciaFiccion.peli4parasab=""; 
+             VentanaCienciaFiccion.peli4paradom="";
+             
+             codigotexto=0; 
+             codigotextodom=0 ;
+             
+             codigosab.setEditable(true);
+             codigodom.setEditable(true);
+             
+             VentanaComedia.codigosab.setEditable(true);
+             VentanaComedia.codigodom.setEditable(true);
+             
+             VentanaTerror.codigosab.setEditable(true);
+             VentanaTerror.codigodom.setEditable(true);
+             
+             VentanaCienciaFiccion.codigosab.setEditable(true);
+             VentanaCienciaFiccion.codigodom.setEditable(true);
+          }
          
+         
+         if(salirfield.getText().equals("1") ) {
+             
+             VentanaSabadoDomingo generos=new VentanaSabadoDomingo();
+             generos.setBounds(0, 0, 1000, 700);
+             generos.setVisible(true);
+             this.setVisible(false);
+             generos.setResizable(false);
+             generos.setTitle("Ventana Sabado Domingo");              
+          }    
    }
     
       public static void main(String[] ar){
