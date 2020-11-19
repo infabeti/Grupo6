@@ -3,6 +3,7 @@ package Reto.cartelera.AidayNaiara;
 import javax.swing.*;
 import java.awt.event.*;
 import java.awt.Color;
+import javax.swing.Timer;
 
 public class VentanaFinal extends JFrame implements ActionListener {
 	
@@ -25,9 +26,30 @@ public class VentanaFinal extends JFrame implements ActionListener {
         gracias.setFont(gracias.getFont().deriveFont(40f));
         add(gracias);
         
-      
+        Timer timer = new Timer (3000, new ActionListener ()
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+            	VentanaBienvenida tempof=new VentanaBienvenida();
+            	tempof.setBounds(0, 0, 1000, 700);
+            	tempof.setVisible(true);
+                this.setVisible(false); 
+                tempof.setResizable(false);
+                tempof.setTitle("Bienvenida");  
+                
+                
+             }
+
+    		private void setVisible(boolean b) {
+    			// TODO Auto-generated method stub
+    			
+    		}
+    		
+        });
+   
+        timer.start();  
+        timer.setRepeats(false);
        
-  
     }
     
     
