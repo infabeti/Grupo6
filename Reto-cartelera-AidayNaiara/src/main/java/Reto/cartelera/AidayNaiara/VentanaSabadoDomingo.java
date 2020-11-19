@@ -15,6 +15,7 @@ public class VentanaSabadoDomingo extends JFrame implements ActionListener{
    public JButton si;
    public Color azulito;
    static public JTextField campogeneros, tiempsab, tiempdom,s1parasab, s2parasab;
+   static public Double tiemposabado, tiempodomingo;
    
    public VentanaSabadoDomingo(){
         
@@ -93,11 +94,17 @@ public class VentanaSabadoDomingo extends JFrame implements ActionListener{
         tiemporestsab.setFont(tiemporestsab.getFont().deriveFont(14f));
         add(tiemporestsab);
         
-        tiempsab = new JTextField("8");
+        tiempsab = new JTextField();
         tiempsab.setBounds(290, 525, 160, 30);
         tiempsab.setEditable(false);
         add(tiempsab);
         
+        
+        tiemposabado=8.00;
+        tiempsab.setText(""+tiemposabado);        
+        tiempsab.setText("" +VentanaCienciaFiccion.tiemponuevsab);//nuevo tiempo restando horas de peliculas
+        
+        /*------------domingo---------*/
         
         tiemporestdom=new JLabel("HORAS RESTANTES DOMINGO");
         tiemporestdom.setBounds(550,510,900,60);
@@ -105,11 +112,17 @@ public class VentanaSabadoDomingo extends JFrame implements ActionListener{
         add(tiemporestdom);
         
 
-        tiempdom = new JTextField("6");
+        tiempdom = new JTextField();
         tiempdom.setBounds(770, 525, 160, 30);
         tiempdom.setEditable(false);
         add(tiempdom);
 
+        
+        tiempodomingo=6.00;
+        tiempdom.setText(""+tiempodomingo);
+        tiempdom.setText("" +VentanaCienciaFiccion.tiemponuevdom);//nuevo tiempo restando horas de peliculas
+        
+        
         
         si=new JButton("CONTINUAR");
         si.setBounds(770, 590, 160, 45);
@@ -119,6 +132,8 @@ public class VentanaSabadoDomingo extends JFrame implements ActionListener{
         si.addActionListener(this);
         si.setBackground(azulito);
         si.setForeground(Color.black);
+        
+        
         
   
     }

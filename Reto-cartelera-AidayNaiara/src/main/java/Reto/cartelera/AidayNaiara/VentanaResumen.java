@@ -43,6 +43,9 @@ public class VentanaResumen extends JFrame implements ActionListener{
         s1parasab.setEditable(false);
         add(s1parasab);
         
+        String text = VentanaSabadoDomingo.s1parasab.getText();
+        s1parasab.setText(text);
+       		
         carteleradomingo=new JLabel("CARTELERA DOMINGO");
         carteleradomingo.setBounds(520,160,900,60);
         carteleradomingo.setFont(carteleradomingo.getFont().deriveFont(35f));
@@ -62,7 +65,10 @@ public class VentanaResumen extends JFrame implements ActionListener{
         s2parasab = new JTextField();
         s2parasab.setBounds(530, 240, 360, 250);
         s2parasab.setEditable(false);
-        add(s2parasab);    
+        add(s2parasab);  
+        
+        String text2 = VentanaSabadoDomingo.s2parasab.getText();
+        s2parasab.setText(text2);
     
         si=new JButton("CONTINUAR");
         si.setBounds(770, 590, 160, 45);

@@ -14,6 +14,7 @@ public class VentanaDrama extends JFrame implements ActionListener{
    public static JTextField codigosab, codigodom, salirfield;
    public static String peli1parasab="",peli1paradom="";
    public static Integer codigotexto=0,codigotextodom=0 ;
+   public static Double tiemponuevsab=8.00, tiemponuevdom=6.00;
    public Color azulito;
    
    
@@ -210,6 +211,9 @@ public class VentanaDrama extends JFrame implements ActionListener{
              VentanaSabadoDomingo.s1parasab.setText(peli1parasab + VentanaComedia.peli2parasab + VentanaTerror.peli3parasab + VentanaCienciaFiccion.peli4parasab);
              VentanaSabadoDomingo.s2parasab.setText(peli1paradom + VentanaComedia.peli2paradom + VentanaTerror.peli3paradom + VentanaCienciaFiccion.peli4paradom);  //todas las varaiables de cada ventana para que las coja.
              
+             tiemponuevsab= VentanaSabadoDomingo.tiemposabado= VentanaSabadoDomingo.tiemposabado - 1.56;
+             VentanaSabadoDomingo.tiempsab.setText("" + tiemponuevsab);
+             VentanaSabadoDomingo.tiempdom.setText("" + tiemponuevdom);
           }
          
          if(codigosab.getText().equals("2") ) {
@@ -228,6 +232,9 @@ public class VentanaDrama extends JFrame implements ActionListener{
              VentanaSabadoDomingo.s1parasab.setText(peli1parasab + VentanaComedia.peli2parasab + VentanaTerror.peli3parasab + VentanaCienciaFiccion.peli4parasab);
              VentanaSabadoDomingo.s2parasab.setText(peli1paradom + VentanaComedia.peli2paradom + VentanaTerror.peli3paradom + VentanaCienciaFiccion.peli4paradom); 
                    
+             tiemponuevsab=  VentanaSabadoDomingo.tiemposabado= VentanaSabadoDomingo.tiemposabado - 3.17;
+             VentanaSabadoDomingo.tiempsab.setText("" + tiemponuevsab);
+             VentanaSabadoDomingo.tiempdom.setText("" + tiemponuevdom);
           }
          
          if(codigosab.getText().equals("3") ) {
@@ -245,6 +252,9 @@ public class VentanaDrama extends JFrame implements ActionListener{
              VentanaSabadoDomingo.s1parasab.setText(peli1parasab + VentanaComedia.peli2parasab + VentanaTerror.peli3parasab + VentanaCienciaFiccion.peli4parasab);
              VentanaSabadoDomingo.s2parasab.setText(peli1paradom + VentanaComedia.peli2paradom + VentanaTerror.peli3paradom + VentanaCienciaFiccion.peli4paradom); 
 
+             tiemponuevsab=  VentanaSabadoDomingo.tiemposabado= VentanaSabadoDomingo.tiemposabado - 2.22;
+             VentanaSabadoDomingo.tiempsab.setText("" + tiemponuevsab);
+             VentanaSabadoDomingo.tiempdom.setText("" + tiemponuevdom);
           }
          
   
@@ -263,7 +273,10 @@ public class VentanaDrama extends JFrame implements ActionListener{
              codigotexto = 4; 
              VentanaSabadoDomingo.s1parasab.setText(peli1parasab + VentanaComedia.peli2parasab + VentanaTerror.peli3parasab + VentanaCienciaFiccion.peli4parasab);
              VentanaSabadoDomingo.s2parasab.setText(peli1paradom + VentanaComedia.peli2paradom + VentanaTerror.peli3paradom + VentanaCienciaFiccion.peli4paradom); 
- 
+             
+             tiemponuevsab=  VentanaSabadoDomingo.tiemposabado= VentanaSabadoDomingo.tiemposabado - 2.13;
+             VentanaSabadoDomingo.tiempsab.setText("" + tiemponuevsab);
+             VentanaSabadoDomingo.tiempdom.setText("" + tiemponuevdom);
             
          }
          
@@ -321,7 +334,11 @@ public class VentanaDrama extends JFrame implements ActionListener{
              
              VentanaSabadoDomingo.s1parasab.setText(peli1parasab + VentanaComedia.peli2parasab + VentanaTerror.peli3parasab + VentanaCienciaFiccion.peli4parasab);
              VentanaSabadoDomingo.s2parasab.setText(peli1paradom + VentanaComedia.peli2paradom + VentanaTerror.peli3paradom + VentanaCienciaFiccion.peli4paradom); 
-          }
+         
+             tiemponuevdom=   VentanaSabadoDomingo.tiempodomingo= VentanaSabadoDomingo.tiempodomingo - 1.56;
+             VentanaSabadoDomingo.tiempdom.setText("" + tiemponuevdom);
+             VentanaSabadoDomingo.tiempsab.setText("" + tiemponuevsab);
+         }
          
          if(codigodom.getText().equals("2") ) {
              
@@ -338,7 +355,11 @@ public class VentanaDrama extends JFrame implements ActionListener{
              
              VentanaSabadoDomingo.s1parasab.setText(peli1parasab + VentanaComedia.peli2parasab + VentanaTerror.peli3parasab + VentanaCienciaFiccion.peli4parasab);
              VentanaSabadoDomingo.s2parasab.setText(peli1paradom + VentanaComedia.peli2paradom + VentanaTerror.peli3paradom + VentanaCienciaFiccion.peli4paradom); 
-          }
+         
+             tiemponuevdom=  VentanaSabadoDomingo.tiempodomingo= VentanaSabadoDomingo.tiempodomingo - 3.17;
+             VentanaSabadoDomingo.tiempdom.setText("" + tiemponuevdom);
+             VentanaSabadoDomingo.tiempsab.setText("" + tiemponuevsab);
+         }
          
          if(codigodom.getText().equals("3") ) {
              
@@ -355,7 +376,12 @@ public class VentanaDrama extends JFrame implements ActionListener{
              
              VentanaSabadoDomingo.s1parasab.setText(peli1parasab + VentanaComedia.peli2parasab + VentanaTerror.peli3parasab + VentanaCienciaFiccion.peli4parasab);
              VentanaSabadoDomingo.s2parasab.setText(peli1paradom + VentanaComedia.peli2paradom + VentanaTerror.peli3paradom + VentanaCienciaFiccion.peli4paradom); 
-          }
+         
+             tiemponuevdom= VentanaSabadoDomingo.tiempodomingo= VentanaSabadoDomingo.tiempodomingo - 2.22;
+             VentanaSabadoDomingo.tiempdom.setText("" + tiemponuevdom);
+             VentanaSabadoDomingo.tiempsab.setText("" + tiemponuevsab);
+         
+         }
          
   
          if(codigodom.getText().equals("4") ) {
@@ -374,7 +400,9 @@ public class VentanaDrama extends JFrame implements ActionListener{
              VentanaSabadoDomingo.s1parasab.setText(peli1parasab + VentanaComedia.peli2parasab + VentanaTerror.peli3parasab + VentanaCienciaFiccion.peli4parasab);
              VentanaSabadoDomingo.s2parasab.setText(peli1paradom + VentanaComedia.peli2paradom + VentanaTerror.peli3paradom + VentanaCienciaFiccion.peli4paradom); 
              
-            
+             tiemponuevdom= VentanaSabadoDomingo.tiempodomingo= VentanaSabadoDomingo.tiempodomingo - 2.13;
+             VentanaSabadoDomingo.tiempdom.setText("" + tiemponuevdom);
+             VentanaSabadoDomingo.tiempsab.setText("" + tiemponuevsab);
             
          }
          

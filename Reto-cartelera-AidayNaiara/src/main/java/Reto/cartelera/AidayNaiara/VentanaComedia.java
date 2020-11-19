@@ -14,6 +14,7 @@ public class VentanaComedia extends JFrame implements ActionListener{
    static public JTextField codigosab, codigodom, salirfield;
    public static String peli2parasab="",peli2paradom="";
    public static Integer codigotexto=0,codigotextodom=0 ;
+   public static Double tiemponuevsab, tiemponuevdom;
    public Color azulito;
    
    
@@ -146,9 +147,7 @@ public class VentanaComedia extends JFrame implements ActionListener{
         salirfield.setBounds(530, 595, 150, 30);
         salirfield.setEditable(true);
         add(salirfield);
-        
- 
-  
+          
     }
     
     public void actionPerformed(ActionEvent e){
@@ -210,6 +209,10 @@ public class VentanaComedia extends JFrame implements ActionListener{
              VentanaSabadoDomingo.s1parasab.setText(peli2parasab + VentanaDrama.peli1parasab + VentanaTerror.peli3parasab + VentanaCienciaFiccion.peli4parasab);
              VentanaSabadoDomingo.s2parasab.setText(peli2paradom + VentanaDrama.peli1paradom + VentanaTerror.peli3paradom + VentanaCienciaFiccion.peli4paradom); 
              
+             
+             tiemponuevsab= VentanaDrama.tiemponuevsab= VentanaDrama.tiemponuevsab - 1.30;
+             VentanaSabadoDomingo.tiempsab.setText("" + tiemponuevsab);
+             VentanaSabadoDomingo.tiempdom.setText("" + tiemponuevdom);
           }
          
          if(codigosab.getText().equals("2") ) {
@@ -227,7 +230,11 @@ public class VentanaComedia extends JFrame implements ActionListener{
              codigotexto = 2;
              VentanaSabadoDomingo.s1parasab.setText(peli2parasab + VentanaDrama.peli1parasab + VentanaTerror.peli3parasab + VentanaCienciaFiccion.peli4parasab);
              VentanaSabadoDomingo.s2parasab.setText(peli2paradom + VentanaDrama.peli1paradom + VentanaTerror.peli3paradom + VentanaCienciaFiccion.peli4paradom); 
-                   
+               
+             
+             tiemponuevsab= VentanaDrama.tiemponuevsab= VentanaDrama.tiemponuevsab - 1.59;
+             VentanaSabadoDomingo.tiempsab.setText("" + tiemponuevsab);
+             VentanaSabadoDomingo.tiempdom.setText("" + tiemponuevdom);
           }
          
          if(codigosab.getText().equals("3") ) {
@@ -246,6 +253,9 @@ public class VentanaComedia extends JFrame implements ActionListener{
              VentanaSabadoDomingo.s1parasab.setText(peli2parasab + VentanaDrama.peli1parasab + VentanaTerror.peli3parasab + VentanaCienciaFiccion.peli4parasab);
              VentanaSabadoDomingo.s2parasab.setText(peli2paradom + VentanaDrama.peli1paradom + VentanaTerror.peli3paradom + VentanaCienciaFiccion.peli4paradom); 
              
+             tiemponuevsab= VentanaDrama.tiemponuevsab= VentanaDrama.tiemponuevsab - 1.34;
+             VentanaSabadoDomingo.tiempsab.setText("" + tiemponuevsab);
+             VentanaSabadoDomingo.tiempdom.setText("" + tiemponuevdom);
           }
          
   
@@ -266,6 +276,9 @@ public class VentanaComedia extends JFrame implements ActionListener{
              VentanaSabadoDomingo.s1parasab.setText(peli2parasab + VentanaDrama.peli1parasab + VentanaTerror.peli3parasab + VentanaCienciaFiccion.peli4parasab);
              VentanaSabadoDomingo.s2parasab.setText(peli2paradom + VentanaDrama.peli1paradom + VentanaTerror.peli3paradom + VentanaCienciaFiccion.peli4paradom); 
             
+             tiemponuevsab= VentanaDrama.tiemponuevsab= VentanaDrama.tiemponuevsab - 1.28;
+             VentanaSabadoDomingo.tiempsab.setText("" + tiemponuevsab);
+             VentanaSabadoDomingo.tiempdom.setText("" + tiemponuevdom);
          }
          
          /* -------------------------------- para domingo --------------------------------------------------- */
@@ -324,7 +337,12 @@ public class VentanaComedia extends JFrame implements ActionListener{
              codigotextodom = 1; 
              VentanaSabadoDomingo.s1parasab.setText(peli2parasab + VentanaDrama.peli1parasab + VentanaTerror.peli3parasab + VentanaCienciaFiccion.peli4parasab);
              VentanaSabadoDomingo.s2parasab.setText(peli2paradom + VentanaDrama.peli1paradom + VentanaTerror.peli3paradom + VentanaCienciaFiccion.peli4paradom); 
-          }
+            
+             tiemponuevdom= VentanaDrama.tiemponuevdom= VentanaDrama.tiemponuevdom - 1.30;
+             VentanaSabadoDomingo.tiempsab.setText("" + tiemponuevsab);
+             VentanaSabadoDomingo.tiempdom.setText("" + tiemponuevdom);
+         
+         }
          
          if(codigodom.getText().equals("2") ) {
              
@@ -341,7 +359,11 @@ public class VentanaComedia extends JFrame implements ActionListener{
              codigotextodom = 2; 
              VentanaSabadoDomingo.s1parasab.setText(peli2parasab + VentanaDrama.peli1parasab + VentanaTerror.peli3parasab + VentanaCienciaFiccion.peli4parasab);
              VentanaSabadoDomingo.s2parasab.setText(peli2paradom + VentanaDrama.peli1paradom + VentanaTerror.peli3paradom + VentanaCienciaFiccion.peli4paradom); 
-          }
+         
+             tiemponuevdom= VentanaDrama.tiemponuevdom= VentanaDrama.tiemponuevdom - 1.59;
+             VentanaSabadoDomingo.tiempsab.setText("" + tiemponuevsab);
+             VentanaSabadoDomingo.tiempdom.setText("" + tiemponuevdom);
+         }
          
          if(codigodom.getText().equals("3") ) {
              
@@ -359,7 +381,11 @@ public class VentanaComedia extends JFrame implements ActionListener{
              codigotextodom = 3; 
              VentanaSabadoDomingo.s1parasab.setText(peli2parasab + VentanaDrama.peli1parasab + VentanaTerror.peli3parasab + VentanaCienciaFiccion.peli4parasab);
              VentanaSabadoDomingo.s2parasab.setText(peli2paradom + VentanaDrama.peli1paradom + VentanaTerror.peli3paradom + VentanaCienciaFiccion.peli4paradom); 
-          }
+         
+             tiemponuevdom= VentanaDrama.tiemponuevdom= VentanaDrama.tiemponuevdom - 1.34;
+             VentanaSabadoDomingo.tiempsab.setText("" + tiemponuevsab);
+             VentanaSabadoDomingo.tiempdom.setText("" + tiemponuevdom);
+         }
          
   
          if(codigodom.getText().equals("4") ) {
@@ -378,7 +404,10 @@ public class VentanaComedia extends JFrame implements ActionListener{
              codigotextodom = 4; 
              VentanaSabadoDomingo.s1parasab.setText(peli2parasab + VentanaDrama.peli1parasab + VentanaTerror.peli3parasab + VentanaCienciaFiccion.peli4parasab);
              VentanaSabadoDomingo.s2parasab.setText(peli2paradom + VentanaDrama.peli1paradom + VentanaTerror.peli3paradom + VentanaCienciaFiccion.peli4paradom); 
-             
+           
+             tiemponuevdom= VentanaDrama.tiemponuevdom= VentanaDrama.tiemponuevdom - 1.28;
+             VentanaSabadoDomingo.tiempsab.setText("" + tiemponuevsab);
+             VentanaSabadoDomingo.tiempdom.setText("" + tiemponuevdom);
             
             
          }
