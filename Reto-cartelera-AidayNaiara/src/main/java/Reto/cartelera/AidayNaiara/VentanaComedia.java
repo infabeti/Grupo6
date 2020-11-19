@@ -203,7 +203,7 @@ public class VentanaComedia extends JFrame implements ActionListener{
              comedia.setResizable(false);
              comedia.setTitle("Ventana Cartelera Sábado - Domingo");   
              
-             peli2parasab = peli2parasab + "1. Scary movie: 1h y 30 min \n";
+             peli2parasab = peli2parasab + "\n 1. Scary movie: 1h y 30 min";
                                        
              codigotexto = 1;
              VentanaSabadoDomingo.s1parasab.setText(peli2parasab + VentanaDrama.peli1parasab + VentanaTerror.peli3parasab + VentanaCienciaFiccion.peli4parasab);
@@ -246,7 +246,7 @@ public class VentanaComedia extends JFrame implements ActionListener{
              comedia.setResizable(false);
              comedia.setTitle("Ventana Cartelera Sábado - Domingo");   
              
-             peli2parasab = peli2parasab + "3. La vida de Brian: 1h 34 min";
+             peli2parasab = peli2parasab + " \n 3. La vida de Brian: 1h 34 min";
 
              
              codigotexto = 3;  
@@ -269,7 +269,7 @@ public class VentanaComedia extends JFrame implements ActionListener{
         	 comedia.setTitle("Ventana Cartelera Sábado - Domingo");   
       
         	 
-        	 peli2parasab = peli2parasab + "4. Aterriza como puedas: 1h 28 min";
+        	 peli2parasab = peli2parasab + " \n 4. Aterriza como puedas: 1h 28 min";
 
              
              codigotexto = 4; 
@@ -330,7 +330,7 @@ public class VentanaComedia extends JFrame implements ActionListener{
              comedia.setResizable(false);
              comedia.setTitle("Ventana Cartelera Sábado - Domingo");   
              
-             peli2paradom = peli2paradom + "1. Scary movie: 1h y 30 min \n";
+             peli2paradom = peli2paradom + " \n 1. Scary movie: 1h y 30 min";
  
              
              
@@ -353,7 +353,7 @@ public class VentanaComedia extends JFrame implements ActionListener{
              comedia.setResizable(false);
              comedia.setTitle("Ventana Cartelera Sábado - Domingo");   
              
-             peli2paradom = peli2paradom + "2. El gran Lebowsky: 1h 59 min \n";
+             peli2paradom = peli2paradom + "\n 2. El gran Lebowsky: 1h 59 min";
              
              
              codigotextodom = 2; 
@@ -374,7 +374,7 @@ public class VentanaComedia extends JFrame implements ActionListener{
              comedia.setResizable(false);
              comedia.setTitle("Ventana Cartelera Sábado - Domingo");   
              
-             peli2paradom = peli2paradom + "3. La vida de Brian: 1h 34 min \n";
+             peli2paradom = peli2paradom + "\n 3. La vida de Brian: 1h 34 min";
 
              
              
@@ -398,7 +398,7 @@ public class VentanaComedia extends JFrame implements ActionListener{
         	 comedia.setTitle("Ventana Cartelera Sábado - Domingo");   
       
 
-             peli2paradom = peli2paradom + "4. Aterriza como puedas: 1h 28 min \n";
+             peli2paradom = peli2paradom + "\n 4. Aterriza como puedas: 1h 28 min";
              
              
              codigotextodom = 4; 

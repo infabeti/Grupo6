@@ -12,8 +12,8 @@ public class VentanaResumen extends JFrame implements ActionListener{
    private JLabel cartelerasabado,carteleradomingo, introducsalir, tituloresumen;
    private JButton si;
    private Color azulito;
-   static public JTextField salirfield, tiempsab, tiempdom,s1parasab, s2parasab;
-   
+   static public JTextArea s1parasab, s2parasab;
+   static public JTextField salirfield;
    public VentanaResumen(){
         
         this.getContentPane().setBackground(new java.awt.Color(255,255,255));
@@ -38,7 +38,7 @@ public class VentanaResumen extends JFrame implements ActionListener{
         add(cartelerasabado);
         
         
-        s1parasab = new JTextField();
+        s1parasab = new JTextArea();
         s1parasab.setBounds(80, 240, 360, 250);
         s1parasab.setEditable(false);
         add(s1parasab);
@@ -62,7 +62,7 @@ public class VentanaResumen extends JFrame implements ActionListener{
         salirfield.setEditable(true);
         add(salirfield);
         
-        s2parasab = new JTextField();
+        s2parasab = new JTextArea();
         s2parasab.setBounds(530, 240, 360, 250);
         s2parasab.setEditable(false);
         add(s2parasab);  

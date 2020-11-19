@@ -14,9 +14,10 @@ public class VentanaSabadoDomingo extends JFrame implements ActionListener{
    tiemporestsab, tiemporestdom, contfin;
    public JButton si;
    public Color azulito;
-   static public JTextField campogeneros, tiempsab, tiempdom,s1parasab, s2parasab;
+   static public JTextArea s1parasab, s2parasab;
+   static public JTextField campogeneros, tiempsab, tiempdom;
    static public Double tiemposabado, tiempodomingo;
-   
+  
    public VentanaSabadoDomingo(){
         
         this.getContentPane().setBackground(new java.awt.Color(255,255,255));
@@ -30,11 +31,14 @@ public class VentanaSabadoDomingo extends JFrame implements ActionListener{
         add(cartelerasabado);
         
         
-        s1parasab = new JTextField();
+
+        
+        s1parasab = new JTextArea();
         s1parasab.setBounds(80, 240, 360, 250);
         s1parasab.setEditable(false);
         add(s1parasab);
-        
+      
+
         carteleradomingo=new JLabel("CARTELERA DOMINGO");
         carteleradomingo.setBounds(520,160,900,60);
         carteleradomingo.setFont(carteleradomingo.getFont().deriveFont(35f));
@@ -51,7 +55,7 @@ public class VentanaSabadoDomingo extends JFrame implements ActionListener{
         campogeneros.setEditable(true);
         add(campogeneros);
         
-        s2parasab = new JTextField();
+        s2parasab = new JTextArea();
         s2parasab.setBounds(530, 240, 360, 250);
         s2parasab.setEditable(false);
         add(s2parasab);

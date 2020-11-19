@@ -204,7 +204,7 @@ public class VentanaDrama extends JFrame implements ActionListener{
              drama.setResizable(false);
              drama.setTitle("Ventana Cartelera Sábado - Domingo");   
              
-             peli1parasab = peli1parasab + "1. Handia 1h 56min \n";
+             peli1parasab = peli1parasab + " \n 1. Handia 1h 56min";
                                       
              codigotexto = 1;
              
@@ -246,7 +246,7 @@ public class VentanaDrama extends JFrame implements ActionListener{
              drama.setResizable(false);
              drama.setTitle("Ventana Cartelera Sábado - Domingo");   
              
-             peli1parasab = peli1parasab + "3. Cadena Perpetua: 2h 22 min";
+             peli1parasab = peli1parasab + " \n 3. Cadena Perpetua: 2h 22 min";
 
              codigotexto = 3;  
              VentanaSabadoDomingo.s1parasab.setText(peli1parasab + VentanaComedia.peli2parasab + VentanaTerror.peli3parasab + VentanaCienciaFiccion.peli4parasab);
@@ -268,7 +268,7 @@ public class VentanaDrama extends JFrame implements ActionListener{
         	 drama.setTitle("Ventana Cartelera Sábado - Domingo");   
       
         	 
-        	 peli1parasab = peli1parasab + "4. Million Dollar Baby: 2h 13 min";
+        	 peli1parasab = peli1parasab + " \n 4. Million Dollar Baby: 2h 13 min";
              
              codigotexto = 4; 
              VentanaSabadoDomingo.s1parasab.setText(peli1parasab + VentanaComedia.peli2parasab + VentanaTerror.peli3parasab + VentanaCienciaFiccion.peli4parasab);
@@ -328,7 +328,7 @@ public class VentanaDrama extends JFrame implements ActionListener{
              drama.setResizable(false);
              drama.setTitle("Ventana Cartelera Sábado - Domingo");   
              
-             peli1paradom = peli1paradom + "1. Handia 1h 56min \n";           
+             peli1paradom = peli1paradom + "\n 1. Handia 1h 56min";           
                        
              codigotextodom = 1; 
              
@@ -349,7 +349,7 @@ public class VentanaDrama extends JFrame implements ActionListener{
              drama.setResizable(false);
              drama.setTitle("Ventana Cartelera Sábado - Domingo");   
              
-             peli1paradom = peli1paradom + "2. La lista de Schindler: 3h 17 min \n";             
+             peli1paradom = peli1paradom + "\n 2. La lista de Schindler: 3h 17 min \n";             
              
              codigotextodom = 2; 
              
@@ -370,7 +370,7 @@ public class VentanaDrama extends JFrame implements ActionListener{
              drama.setResizable(false);
              drama.setTitle("Ventana Cartelera Sábado - Domingo");   
              
-             peli1paradom = peli1paradom + "3. Cadena Perpetua: 2h 22 min \n";            
+             peli1paradom = peli1paradom + " \n 3. Cadena Perpetua: 2h 22 min \n";            
              
              codigotextodom = 3; 
              
@@ -394,7 +394,7 @@ public class VentanaDrama extends JFrame implements ActionListener{
         	 drama.setTitle("Ventana Cartelera Sábado - Domingo");   
       
 
-             peli1paradom = peli1paradom + "4. Million Dollar Baby: 2h 13 min \n";
+             peli1paradom = peli1paradom + "\n 4. Million Dollar Baby: 2h 13 min \n";
                           
              codigotextodom = 4; 
              VentanaSabadoDomingo.s1parasab.setText(peli1parasab + VentanaComedia.peli2parasab + VentanaTerror.peli3parasab + VentanaCienciaFiccion.peli4parasab);

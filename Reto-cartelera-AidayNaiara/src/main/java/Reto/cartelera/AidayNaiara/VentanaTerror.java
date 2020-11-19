@@ -13,7 +13,7 @@ public class VentanaTerror extends JFrame implements ActionListener{
    public JButton si;
    static public JTextField codigosab, codigodom, salirfield;
    public static String peli3parasab="",peli3paradom="";
-   public static Integer codigotexto=0,codigotextodom=0 ;
+   public static Integer codigotexto=0,codigotextodom=0;
    public static Double tiemponuevsab, tiemponuevdom;
    private Color azulito;
    
@@ -207,7 +207,7 @@ public class VentanaTerror extends JFrame implements ActionListener{
              drama.setResizable(false);
              drama.setTitle("Ventana Cartelera Sábado - Domingo");   
              
-             peli3parasab = peli3parasab + "1. Psicosis: 1 h 49 min \n";
+             peli3parasab = peli3parasab + "\n 1. Psicosis: 1 h 49 min";
   
              
              
@@ -374,7 +374,7 @@ public class VentanaTerror extends JFrame implements ActionListener{
              drama.setResizable(false);
              drama.setTitle("Ventana Cartelera Sábado - Domingo");   
              
-             peli3paradom = peli3paradom + "3. Dracula: 2 h 35 min \n";
+             peli3paradom = peli3paradom + "\n 3. Dracula: 2 h 35 min";
 
              
              
@@ -398,7 +398,7 @@ public class VentanaTerror extends JFrame implements ActionListener{
         	 drama.setTitle("Ventana Cartelera Sábado - Domingo");   
       
 
-        	 peli3paradom = peli3paradom + "4. Cisne negro: 1 h 50 min \n";
+        	 peli3paradom = peli3paradom + "\n 4. Cisne negro: 1 h 50 min";
              
              
              codigotextodom = 4; 
@@ -497,7 +497,11 @@ public class VentanaTerror extends JFrame implements ActionListener{
              generos.setResizable(false);
              generos.setTitle("Ventana Sabado Domingo");              
           }    
+         
+
    }
+    
+
     
       public static void main(String[] ar){
        

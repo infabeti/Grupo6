@@ -205,7 +205,7 @@ public class VentanaCienciaFiccion extends JFrame implements ActionListener{
              drama.setResizable(false);
              drama.setTitle("Ventana Cartelera Sábado - Domingo");   
              
-             peli4parasab = peli4parasab + "1. 2001: Odisea en el espacio 2 h 22 min \n";
+             peli4parasab = peli4parasab + "\n 1. 2001: Odisea en el espacio 2 h 22 min";
 
                           
              codigotexto = 1;
@@ -246,7 +246,7 @@ public class VentanaCienciaFiccion extends JFrame implements ActionListener{
              drama.setResizable(false);
              drama.setTitle("Ventana Cartelera Sábado - Domingo");   
              
-             peli4parasab = peli4parasab + "3. El planeta de los simios: 1 h 55 min";
+             peli4parasab = peli4parasab + "\n 3. El planeta de los simios: 1 h 55 min";
              
              codigotexto = 3;  
              VentanaSabadoDomingo.s1parasab.setText(peli4parasab + VentanaDrama.peli1parasab + VentanaComedia.peli2parasab + VentanaTerror.peli3parasab);
@@ -268,7 +268,7 @@ public class VentanaCienciaFiccion extends JFrame implements ActionListener{
         	 drama.setTitle("Ventana Cartelera Sábado - Domingo");   
       
         	 
-        	 peli4parasab = peli4parasab + "4. Alien, el octavo pasajero: 1 h 57 min";
+        	 peli4parasab = peli4parasab + "\n 4. Alien, el octavo pasajero: 1 h 57 min";
       
              
              codigotexto = 4; 
@@ -328,7 +328,7 @@ public class VentanaCienciaFiccion extends JFrame implements ActionListener{
              drama.setResizable(false);
              drama.setTitle("Ventana Cartelera Sábado - Domingo");   
              
-             peli4paradom = peli4paradom + "1. 2001: Odisea en el espacio 2 h 22 min \n";
+             peli4paradom = peli4paradom + "\n 1. 2001: Odisea en el espacio 2 h 22 min";
              
              
              codigotextodom = 1; 
@@ -349,7 +349,7 @@ public class VentanaCienciaFiccion extends JFrame implements ActionListener{
              drama.setResizable(false);
              drama.setTitle("Ventana Cartelera Sábado - Domingo");   
              
-             peli4paradom = peli4paradom + "2. La novia de Frankenstein: 1 h 15 min \n";
+             peli4paradom = peli4paradom + "\n 2. La novia de Frankenstein: 1 h 15 min";
              
              
              codigotextodom = 2; 
@@ -370,7 +370,7 @@ public class VentanaCienciaFiccion extends JFrame implements ActionListener{
              drama.setResizable(false);
              drama.setTitle("Ventana Cartelera Sábado - Domingo");   
              
-             peli4paradom = peli4paradom + "3. El planeta de los simios: 1 h 55 min \n";
+             peli4paradom = peli4paradom + "\n 3. El planeta de los simios: 1 h 55 min";
              
              
              codigotextodom = 3; 
@@ -393,7 +393,7 @@ public class VentanaCienciaFiccion extends JFrame implements ActionListener{
         	 drama.setTitle("Ventana Cartelera Sábado - Domingo");   
       
 
-        	 peli4paradom = peli4paradom + "4. Alien, el octavo pasajero: 1 h 57 min \n";
+        	 peli4paradom = peli4paradom + "\n 4. Alien, el octavo pasajero: 1 h 57 min";
              
              
              codigotextodom = 4; 
